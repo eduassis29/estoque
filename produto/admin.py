@@ -10,5 +10,6 @@ class ProdutosAdmin(admin.ModelAdmin):
     'preco',
     'quantidade',
     ]
+    
 admin.site.register(Produtos, ProdutosAdmin)
 admin.site.register(Cores)

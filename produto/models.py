@@ -7,6 +7,11 @@ class Cores(models.Model):
     def __str__(self):
         return self.cor
     
+    class Meta:
+        verbose_name = 'Cor'
+        verbose_name_plural = 'Cores'
+    
+    
 class Produtos(models.Model):
     produto = models.CharField('Produto', max_length=200)
     cor = models.ForeignKey(Cores, on_delete=models.PROTECT, verbose_name='Cor')
