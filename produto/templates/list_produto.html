@@ -10,13 +10,12 @@
             <th>Cor</th>
             <th>Preço</th>
             <th>Quantidade</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
         {% for produto in produtos %}
         <tr>
-            <th>{{ produto.id }}</th>
+            <td>{{ produto.id }}</td>
             <td>{{ produto.produto }}</td>
             <td>{{ produto.cor }}</td>
             <td>{{ produto.preco }}</td>
