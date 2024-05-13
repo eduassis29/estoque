@@ -8,7 +8,8 @@
     </head>
         <body>
             <h1>Responsive Horizontal-to-Scrollable Menu</h1>
-            <p><a href="{% url 'produto:list_produto' %}">Produtos</a></p>
+            <a href="{% url 'produto:list_produto' %}">Produtos</a>
+            <a href="{% url 'entrada:list_entrada' %}">Entradas</a>
             {% block product %}{% endblock %}
         </body>
     </html>

@@ -37,6 +37,7 @@ def update_produto(request, pk):
             'pk': pk,
         }
         return render(request, template_name, context)
+    
 def delete_produto(request, pk):
     produto = Produtos.objects.get(pk=pk)
     produto.delete()
