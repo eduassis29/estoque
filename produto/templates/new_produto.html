@@ -4,6 +4,6 @@
         <form action="{% url 'produto:new_produto' %}" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">salvar</button>
+            <button class="button is-primary" type="submit">salvar</button>
         </form>
 {% endblock %}

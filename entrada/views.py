@@ -22,6 +22,10 @@ def new_entrada(request):
             return redirect('entrada:list_entrada')
     else:
         template_name = 'new_entrada.html'
+        forms = EntradaForm()
+        for field in forms:
+            print(field)
+            print(field.widget_type)
         context = {
             'form': EntradaForm(),
         }

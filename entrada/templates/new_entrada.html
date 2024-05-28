@@ -3,7 +3,24 @@
 <p>Nova Entrada</p>
 <form action="{% url 'entrada:new_entrada' %}" method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
+
+    {% for field in form %}
+        {{ field.widget_type }}
+            <div class = 'field'>
+                <label class="label">{{ field.label }}</label>
+                <div class="control">
+                    {% if field.widget_type == 'select' %}
+                    <div class="select">
+                        {{ field }}
+                    </div>
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                </div>
+            </div>
+
+    {% endfor %}
+
     <button class="button is-primary" type="submit">salvar</button>
 </form>
 {% endblock %}
